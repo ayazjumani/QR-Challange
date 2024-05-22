@@ -1,14 +1,15 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     font-family: "Outfit", sans-serif;
+    background-color: hsl(212, 45%, 89%);
     font-size: 15px;
-    background-color:hsl(212, 45%, 89%);
-    display: flex;
     height: 100vh;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    text-align: center;
     border-radius: 10px;
 }
 
@@ -18,43 +19,36 @@ main {
 }
 
 .qrCodeComponent {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-shrink: 0;
-    border-radius: 10px;
-    border: 1px;    
     background-color: hsl(0, 0%, 100%);
-    padding: 1rem;
+    display: block;
+    justify-content: space-around;
+    border: 1px;
+    height: 80vh;
+    border-radius: 10px;
+    margin: 50px;
 }
 
-.qr-code-component, main {
+.qrCodeComponent, main {
     display: inline-block;
+}
+
+.qrCode > img{
+    border-radius: 10px;
+    width: 95%;
+    margin: 10px;
+    height: auto;
+    border: 1px;    
+}
+
+.qrCodeInfo {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
 h1 {
     font-size: 22px;
     color: hsl(218, 44%, 22%);
     font-weight: 700;
-}
-
-.qrCodeComponent img {
-    width: 22.4vw;
-    height: auto;
-    border: 1px;
-    border-radius: 5px;
-}
-
-.qrCodeComponent qrCodeInfo {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.qrCodeInfo {
-    text-align: center;
-}
-
-.qrCodeComponent div {
-    width: 22.4vw;
 }
 
 p, a {
@@ -63,8 +57,16 @@ p, a {
     font-weight: 400;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-    color: hsl(228, 45%, 44%);
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        width: 90%;
+        height: auto;
+        margin: 10px;
+    }
 }
